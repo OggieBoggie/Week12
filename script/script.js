@@ -18,3 +18,17 @@ function pinkbackground (color)
 clickMeButton.addEventListener('click', pinkbackground)
 // clickMeButton.addEventListener('click', function() {pinkbackground('pink')});
 
+function changeText() 
+// USE FOR DARK AND NON DARK THEME
+{
+    if(clickMeButton.textContent === "Click me!")
+    {
+        clickMeButton.textContent = "Clicked"
+    }
+    else if (clickMeButton.textContent === "Clicked")
+    {
+        clickMeButton.textContent = "Click me!"
+    }
+    
+}
+clickMeButton.addEventListener("click", changeText)
