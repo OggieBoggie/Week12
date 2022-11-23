@@ -19,7 +19,7 @@ clickMeButton.addEventListener('click', pinkbackground)
 // clickMeButton.addEventListener('click', function() {pinkbackground('pink')});
 
 function changeText() 
-// USE FOR DARK AND NON DARK THEME
+// USE FOR DARK AND LIGHT THEME
 {
     if(clickMeButton.textContent === "Click me!")
     {
@@ -32,3 +32,15 @@ function changeText()
     
 }
 clickMeButton.addEventListener("click", changeText)
+
+function updateImage(event)
+{
+    console.log(event)
+    const image = document.querySelector('#shoppingCart')
+    image.src = "images/263142.png";
+    image.width=100;
+    image.height=100;
+    image.alt= "Shopping cart"
+}
+
+clickMeButton.addEventListener("click", updateImage)
