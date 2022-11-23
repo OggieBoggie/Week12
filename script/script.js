@@ -4,8 +4,17 @@ const clickMeButton = document.querySelector(".click-me");
 function clickHandler ()
 {
     alert("You clicked me!");
-    clickMeButton.removeEventListener('click', clickHandler);
+    // clickMeButton.removeEventListener('click', clickHandler);
 }
 
-clickMeButton.addEventListener('click', clickHandler);
+clickMeButton.addEventListener('click', clickHandler, {once:true});
+
+function pinkbackground (color)
+{
+    // document.body.style.background = color
+    document.body.classList.add("pink")
+}
+
+clickMeButton.addEventListener('click', pinkbackground)
+// clickMeButton.addEventListener('click', function() {pinkbackground('pink')});
 
